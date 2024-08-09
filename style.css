@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --LIGHTPINK-clr: #E8BCB9;
+    --YELLOW-CLR: #F39F5A;
+    --ROSE-CLR: #AE445A;
+    --DARKPINK-CLR: #662549;
+    --PURPLE-CLR: #451952;
+    --DARKPURPLE-CLR: #1D1A39;
+    
+}
+
+.main-wrapper{
+    min-height: 100vh;
+    background : linear-gradient(
+        var(--DARKPURPLE-CLR),
+        var(--PURPLE-CLR)
+    );
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    padding-inline: 5rem;
+}
+a{ 
+    text-decoration-line: none;
+}
+li{
+    list-style: none;
+}
+
+.navlist{
+    display:flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.logo-txt{
+    font-size: larger;
+    color: var(--LIGHTPINK-clr);
+     font-family: "Rammetto One", sans-serif;
+    }
+
+
+.navlinks{
+    color: var(--LIGHTPINK-clr);
+}
+
+.nav-btn{
+    color: var(--LIGHTPINK-clr);
+    background: var(--ROSE-CLR);
+    padding: 6rem 1.5rem;
+    border-radius: 5rem;
+}
+.hero-section{
+    height: calc(100vh - 12vh);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.image-container{
+    height: 31rem;
+    width: 27rem;
+    background: var(--ROSE-CLR);
+    background-image: url(IMG20240213134423.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+
+}
+
+.social-contact{
+    background: var(--DARKPURPLE-CLR);
+    padding: 1.6rem 3rem;
+    
+}
+
+span, .social-links{
+    color: var(--LIGHTPINK-clr);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.social-contact li{
+    padding-block: .5rem;
+    position: relative;
+}
+
+.social-links:hover{
+    color: #AE445A;
+}
+
+.poft-txt{
+    font-size: 7rem;
+    color: var(--YELLOW-CLR);
+    position: absolute;
+    top: 13%;
+    left: 20%;
+    text-transform: uppercase;
+    font-family: "Rammetto One", sans-serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .01rem  var(--YELLOW-CLR);
+    line-height: 9rem;
+ }
+
+ .poft-txt::before{
+    content: 'portfolio';
+    position: absolute;
+    top: 0;
+    -webkit-text-fill-color:var(--LIGHTPINK-clr);
+    -webkit-text-stroke: .1rem var(--LIGHTPINK-clr) ;
+    z-index: 3;
+ }
+
+ .intro{
+    position: absolute;
+    left: 3%;
+    bottom: 1%;
+    max-width: 30rem;
+    z-index: 5;
+ }
+
+ .intro p{
+    color: var(--LIGHTPINK-clr);
+    font-size: .95rem;
+    font-weight: bold;
+ }
+
+ .fa-brands{
+    font-size: 7rem;
+    position: absolute;
+    top: -50%;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s ease-in-out;
+
+ }
+
+ .social-links:hover .fa-brands{
+     opacity: 1;
+     visibility: visible;
+     top: 0;
+
+ }
